@@ -1,0 +1,228 @@
+import java.awt.GridLayout;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+public class Tic_Tac_Toc  implements ActionListener{	
+	JFrame jf=new JFrame("TIC TAC TOC");
+	JButton[] b=new JButton[9];
+	GridLayout  gd=new GridLayout(3,3);
+	JPanel jp=new JPanel(gd);
+	JPanel title_panel=new JPanel();
+	JLabel textfield=new JLabel();
+	int click=0;
+	Boolean flag[]=new Boolean[9];	
+	
+	Tic_Tac_Toc(){
+		
+		for(int i=0;i<9;i++) {
+			b[i]=new JButton();
+			b[i].addActionListener(this);
+			b[i].setFont(new Font("Tahoma",Font.PLAIN,99));
+			b[i].setBackground(Color.WHITE);
+			b[i].setForeground(Color.BLACK);
+			//b[i].setBounds(327,292,155,161);
+			jp.add(b[i]);
+		}
+		jf.setBounds(350,100,600,600);
+		jf.setVisible(true);
+		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		textfield.setFont(new Font("Ink Free",Font.BOLD,75));
+		textfield.setText("Tic-Tac-Toe");
+		title_panel.setLayout(new BorderLayout());
+		title_panel.setBounds(0,0,500,500);
+		textfield.setForeground(Color.green);
+		textfield.setHorizontalAlignment(JLabel.CENTER);
+		title_panel.add(textfield);
+		title_panel.setBackground(Color.BLACK);
+	    jf.add(title_panel,BorderLayout.NORTH);
+		jf.add(jp);
+      for(int i=0;i<9;i++) {
+    	  flag[i]=true;
+      }}
+      public void actionPerformed(ActionEvent e) {
+    	  if(e.getSource()==b[0]) {
+    		  if(flag[0]) {
+    			  click++;
+    			  if(click%2==0) {
+    				  b[0].setLabel("O");
+    				  b[0].setEnabled(false);
+    				  flag[0]=false;
+    			  }
+    			  else {
+    				  b[0].setLabel("X");
+    				  b[0].setEnabled(false);
+    				  flag[0]=false;
+    			  }
+    		  }}
+          if(e.getSource()==b[1]) {
+        		  if(flag[1]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[1].setLabel("O");
+        				  b[1].setEnabled(false);
+        				  flag[1]=false;
+        			  }
+        			  else {
+        				  b[1].setLabel("X");
+        				  b[1].setEnabled(false);
+        				  flag[1]=false;
+        			  }
+        		  }
+    	  }
+          if(e.getSource()==b[2]) {
+        		  if(flag[2]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[2].setLabel("O");
+        				  b[2].setEnabled(false);
+        				  flag[2]=false;
+        			  }
+        			  else {
+        				  b[2].setLabel("X");
+        				  b[2].setEnabled(false);
+        				  flag[2]=false;
+        			  }
+        		  }
+    	  }
+    		   if(e.getSource()==b[3]) {
+        		  if(flag[3]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[3].setLabel("O");
+        				  b[3].setEnabled(false);
+        				  flag[3]=false;
+        			  }
+        			  else {
+        				  b[3].setLabel("X");
+        				  b[3].setEnabled(false);
+        				  flag[3]=false;
+        			  }
+        		  }
+    	  }
+    		   if(e.getSource()==b[4]) {
+        		  if(flag[4]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[4].setLabel("O");
+        				  b[4].setEnabled(false);
+        				  flag[4]=false;
+        			  }
+        			  else {
+        				  b[4].setLabel("X");
+        				  b[4].setEnabled(false);
+        				  flag[4]=false;
+        			  }
+        		  }
+    	  }
+    		   if(e.getSource()==b[5]) {
+        		  if(flag[5]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[5].setLabel("O");
+        				  b[5].setEnabled(false);
+        				  flag[5]=false;
+        			  }
+        			  else {
+        				  b[5].setLabel("X");
+        				  b[5].setEnabled(false);
+        				  flag[5]=false;
+        			  }
+        		  }
+    	  }
+    		   if(e.getSource()==b[6]) {
+        		  if(flag[6]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[6].setLabel("O");
+        				  b[6].setEnabled(false);
+        				  flag[6]=false;
+        			  }
+        			  else {
+        				  b[6].setLabel("X");
+        				  b[6].setEnabled(false);
+        				  flag[6]=false;
+        			  }
+        		  }
+    	  }
+    		   if(e.getSource()==b[7]) {
+        		  if(flag[7]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[7].setLabel("O");
+        				  b[7].setEnabled(false);
+        				  flag[7]=false;
+        			  }
+        			  else {
+        				  b[7].setLabel("X");
+        				  b[7].setEnabled(false);
+        				  flag[7]=false;
+        			  }
+        		  }
+    	  }
+    		   if(e.getSource()==b[8]) {
+        		  if(flag[8]) {
+        			  click++;
+        			  if(click%2==0) {
+        				  b[8].setLabel("O");
+        				  b[8].setEnabled(false);
+        				  flag[8]=false;
+        			  }
+        			  else {
+        				  b[8].setLabel("X");
+        				  b[8].setEnabled(false);
+        				  flag[8]=false;
+        			  }
+        		  }
+        }
+       if((flag[0]==false)&&(b[0].getText().equals(b[1].getText())&&(b[1].getText().equals(b[2].getText())))){
+    	   String value=b[0].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if((flag[0]==false)&&(b[0].getText().equals(b[3].getText())&&(b[3].getText().equals(b[6].getText())))){
+    	   String value=b[0].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if((flag[1]==false)&&(b[1].getText().equals(b[4].getText())&&(b[4].getText().equals(b[7].getText())))){
+    	   String value=b[1].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if((flag[2]==false)&&(b[2].getText().equals(b[5].getText())&&(b[5].getText().equals(b[8].getText())))){
+    	   String value=b[2].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if((flag[3]==false)&&(b[3].getText().equals(b[4].getText())&&(b[4].getText().equals(b[5].getText())))){
+    	   String value=b[3].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if((flag[6]==false)&&(b[6].getText().equals(b[7].getText())&&(b[7].getText().equals(b[8].getText())))){
+    	   String value=b[6].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if((flag[0]==false)&&(b[0].getText().equals(b[4].getText())&&(b[4].getText().equals(b[8].getText())))){
+    	   String value=b[0].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if((flag[2]==false)&&(b[2].getText().equals(b[4].getText())&&(b[4].getText().equals(b[6].getText())))){
+    	   String value=b[2].getText();
+    	   JOptionPane.showMessageDialog(null,value+" is the winner!");
+       }
+       else if(flag[1]==false && flag[0]==false && flag[2]==false && flag[3]==false &&flag[4]==false && flag[5]==false && flag[6]==false && flag[7]==false && flag[8]==false) {
+    	   JOptionPane.showMessageDialog(null,"It is the Draw");
+       }
+      
+}
+      
+	public static void main(String[] args) {
+		
+Tic_Tac_Toc tt=new Tic_Tac_Toc();
+
+	}
+
+}
